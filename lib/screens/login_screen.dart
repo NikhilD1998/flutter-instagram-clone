@@ -44,9 +44,68 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 64,
           ),
           TextFieldInput(
-              hintText: 'Enter Your Email',
-              textEditingContoller: _emailController,
-              textInputType: TextInputType.emailAddress)
+            hintText: 'Enter Your Email',
+            textEditingContoller: _emailController,
+            textInputType: TextInputType.emailAddress,
+          ),
+          SizedBox(
+            height: 24,
+          ),
+          TextFieldInput(
+            hintText: 'Enter Your Password',
+            textEditingContoller: _passwordController,
+            textInputType: TextInputType.text,
+            isPass: true,
+          ),
+          SizedBox(
+            height: 24,
+          ),
+          InkWell(
+            child: Container(
+              child: Text('Log in'),
+              width: double.infinity,
+              alignment: Alignment.center,
+              padding: EdgeInsets.symmetric(vertical: 12),
+              decoration: ShapeDecoration(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(4),
+                  ),
+                ),
+                color: blueColor,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 12,
+          ),
+          Flexible(
+            child: Container(),
+            flex: 2,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                child: Text("Don't have an account?"),
+                padding: EdgeInsets.symmetric(vertical: 8),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  child: Text(
+                    "Sign Up",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              )
+            ],
+          )
         ],
       ),
     )));
