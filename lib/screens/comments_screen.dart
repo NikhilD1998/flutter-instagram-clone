@@ -20,7 +20,6 @@ class _CommentsScreenState extends State<CommentsScreen> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     _commentController.dispose();
   }
@@ -32,7 +31,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: mobileBackgroundColor,
-        title: Text('Comments'),
+        title: const Text('Comments'),
         centerTitle: false,
       ),
       body: StreamBuilder(
@@ -44,7 +43,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
             .snapshots(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }
@@ -61,7 +60,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
         height: kToolbarHeight,
         margin:
             EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           left: 16,
           right: 8,
         ),
@@ -75,7 +74,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.only(left: 16, right: 8),
+                padding: const EdgeInsets.only(left: 16, right: 8),
                 child: TextField(
                   controller: _commentController,
                   decoration: InputDecoration(
@@ -98,11 +97,11 @@ class _CommentsScreenState extends State<CommentsScreen> {
                 });
               },
               child: Container(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   vertical: 8,
                   horizontal: 8,
                 ),
-                child: Text(
+                child: const Text(
                   'Post',
                   style: TextStyle(color: Colors.blueAccent),
                 ),

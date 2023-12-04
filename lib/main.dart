@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.active) {
                 if (snapshot.hasData) {
-                  return ResponsiveLayout(
+                  return const ResponsiveLayout(
                     webScreenLayout: WebScreenLayout(),
                     mobileScreenLayout: MobileScreenLayout(),
                   );
@@ -49,14 +49,14 @@ class MyApp extends StatelessWidget {
                 }
               }
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return Center(
+                return const Center(
                   child: CircularProgressIndicator(
                     color: primaryColor,
                   ),
                 );
               }
 
-              return LoginScreen();
+              return const LoginScreen();
             },
           )),
     );

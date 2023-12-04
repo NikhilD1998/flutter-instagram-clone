@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_clone/resources/auth_methods.dart';
@@ -39,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (res == 'success') {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => ResponsiveLayout(
+          builder: (context) => const ResponsiveLayout(
             webScreenLayout: WebScreenLayout(),
             mobileScreenLayout: MobileScreenLayout(),
           ),
@@ -56,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
   void navigateToSignUp() {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => SignupScreen(),
+        builder: (context) => const SignupScreen(),
       ),
     );
   }
@@ -69,21 +71,21 @@ class _LoginScreenState extends State<LoginScreen> {
           padding: MediaQuery.of(context).size.width > webScrenSize
               ? EdgeInsets.symmetric(
                   horizontal: MediaQuery.of(context).size.width / 3)
-              : EdgeInsets.symmetric(horizontal: 32),
+              : const EdgeInsets.symmetric(horizontal: 32),
           width: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Flexible(
-                child: Container(),
                 flex: 2,
+                child: Container(),
               ),
               SvgPicture.asset(
                 'assets/images/logo.svg',
                 color: primaryColor,
                 height: 64,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 64,
               ),
               TextFieldInput(
@@ -91,7 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 textEditingContoller: _emailController,
                 textInputType: TextInputType.emailAddress,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               TextFieldInput(
@@ -100,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 textInputType: TextInputType.text,
                 isPass: true,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               InkWell(
@@ -115,8 +117,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       : Text('Log in'),
                   width: double.infinity,
                   alignment: Alignment.center,
-                  padding: EdgeInsets.symmetric(vertical: 12),
-                  decoration: ShapeDecoration(
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  decoration: const ShapeDecoration(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(
                         Radius.circular(4),
@@ -126,27 +128,27 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               Flexible(
-                child: Container(),
                 flex: 2,
+                child: Container(),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    child: Text("Don't have an account?"),
-                    padding: EdgeInsets.symmetric(vertical: 8),
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: const Text("Don't have an account?"),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   GestureDetector(
                     onTap: navigateToSignUp,
                     child: Container(
-                      child: Text(
+                      child: const Text(
                         "Sign Up",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
