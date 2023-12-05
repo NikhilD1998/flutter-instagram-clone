@@ -32,3 +32,6 @@ InstaMirror is a Flutter app that serves as a clone of Instagram. Users can regi
   - [uuid](https://pub.dev/packages/uuid): Generates unique identifiers.
   - [intl](https://pub.dev/packages/intl): Internationalization and localization support.
   - [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons): Customize app icons for different platforms.
+
+<br>
+<h3 id="description">Download: <a href='https://github.com/NikhilD1998/flutter-instagram-clone/blob/main/InstaMirror-app-release.apk'> InstaMirror.apk</a></h3>
